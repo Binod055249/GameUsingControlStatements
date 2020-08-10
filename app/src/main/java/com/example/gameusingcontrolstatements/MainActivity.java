@@ -110,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
                         txtGameStatus.setText("You Lost");
                         makeImgDiceInvisible();
                         makeBtnRestartVisible();
+                    }else{
+                        points=diceSum;
+                        oldTxtCalculationValue=txtCalculations.getText().toString();
+                        txtCalculations.setText(oldTxtCalculationValue+"\n");
+                        txtGameStatus.setText("Continue The game");
+                        oldTxtCalculationValue="Your Points is: "+points+"\n";
                     }
                 }
             }
